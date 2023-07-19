@@ -24,7 +24,7 @@ const isMe = computed(() => message.role === 'user')
         'text-neutral-100': !isMe,
       }"
     >
-      {{ isMe ? 'Jij' : 'Assistant' }}:
+      {{ isMe ? 'Jij' : 'Thibaut' }}:
     </p>
     <p class="mb-0.5" v-html="message.message" />
 
