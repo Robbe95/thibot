@@ -60,7 +60,7 @@ handleCreateConversation()
         ThiBot
       </h1>
 
-      <div class="flex max-h-[calc(100vh-6rem)] w-full flex-1 flex-col justify-between gap-2 rounded bg-white py-4 shadow-main lg:max-h-[60vh]">
+      <div class="flex max-h-[calc(100dvh-6rem)] w-full flex-1 flex-col justify-between gap-2 rounded bg-white py-4 shadow-main lg:max-h-[60vh]">
         <!-- <h2 class="text-xl font-bold">
           Chat: {{ currentChat }}
         </h2> -->
