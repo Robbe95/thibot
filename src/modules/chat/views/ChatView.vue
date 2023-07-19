@@ -64,7 +64,7 @@ handleCreateConversation()
         <!-- <h2 class="text-xl font-bold">
           Chat: {{ currentChat }}
         </h2> -->
-        <div class="overflow-auto px-4">
+        <div id="chat-log" class="overflow-auto px-4">
           <ChatLog v-if="conversation?.messages" class="h-full flex-1" :log="conversation?.messages" :is-loading="isSending" />
         </div>
         <div class="px-4">

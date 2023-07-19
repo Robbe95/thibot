@@ -6,7 +6,6 @@ const { log, isLoading } = defineProps<{ log: Message[]; isLoading: boolean }>()
 
 <template>
   <div
-    id="chat-log"
     class="flex w-full flex-col gap-2 duration-200" :class="{
       'opacity-30': isLoading,
     }"
