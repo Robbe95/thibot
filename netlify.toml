@@ -2,7 +2,7 @@
   NODE_VERSION = "16"
 
 [build]
-  publish = ".histoire/dist"
+  publish = "dist"
   command = "pnpm run production"
 
 [[redirects]]
