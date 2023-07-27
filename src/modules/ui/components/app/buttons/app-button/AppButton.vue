@@ -28,10 +28,10 @@ const handleClick = (): void => {
 <template>
   <!-- eslint-disable tailwindcss/no-custom-classname -->
   <button
-    class="relative overflow-hidden whitespace-nowrap rounded  px-3 py-2 transition duration-200 hover:shadow-main md:px-8"
+    class="relative overflow-hidden whitespace-nowrap rounded-lg  px-3 py-2 transition duration-200 hover:shadow-main md:px-8"
     :class="{
       'cursor-not-allowed bg-opacity-70': isDisabled || isLoading,
-      ' bg-neutral-800 text-white': variant === 'primary',
+      ' border-primary-500 bg-primary-500 text-white': variant === 'primary',
       'border border-primary-500 bg-white text-primary-500': variant === 'secondary',
     }" @click="handleClick"
   >

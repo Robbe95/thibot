@@ -90,6 +90,7 @@ declare module 'vue' {
     InfoIcon: typeof import('./src/components/icons/InfoIcon.vue')['default']
     LoginForm: typeof import('./src/modules/auth/components/LoginForm.vue')['default']
     LoginPage: typeof import('./src/modules/auth/pages/LoginPage.vue')['default']
+    LogoCollection: typeof import('./src/modules/chat/components/LogoCollection.vue')['default']
     NoFilterIcon: typeof import('./src/components/icons/NoFilterIcon.vue')['default']
     PrefetchLink: typeof import('./src/components/navigation/PrefetchLink.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

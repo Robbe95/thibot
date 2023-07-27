@@ -11,36 +11,43 @@ const isMe = computed(() => message.role === 'user')
 </script>
 
 <template>
-  <div class="flex gap-2">
-    <div v-if="!isMe" class="inline-block h-12 w-12 flex-none overflow-hidden rounded-full bg-neutral-800 p-0.5 shadow-main ">
-      <img src="@/assets/hoofd.png" alt="Thibke" class=" pt-0.5">
-    </div>
+  <div class="flex items-end justify-end gap-2">
+    <img v-if="!isMe" src="@/assets/thibhaufd.png" alt="Thibke">
     <div v-else class="w-12 flex-none p-0.5" />
 
     <div
-      class="w-full rounded px-4 py-3" :class="{
-        'bg-neutral-200 text-right': isMe,
-        'bg-neutral-800 text-left text-white': !isMe,
+      class="w-full"
+      :class="{
+        'text-left': !isMe,
+        'flex flex-col items-end justify-end': isMe,
       }"
     >
       <div
         v-if="isFirstOfSender"
-        class="text-lg font-bold" :class="{
-          'text-neutral-900': isMe,
-          'text-neutral-100': !isMe,
+        class="mb-0.5 text-sm text-[#B3B3B3]"
+        :class="{
+          'text-left': !isMe,
+          'text-right': isMe,
         }"
       >
         <p>
           {{ isMe ? 'Jij' : 'Thibaut' }}:
         </p>
       </div>
-      <p class="mb-0.5" v-html="message.message" />
+      <p
+        class="mb-1 w-full max-w-[80%] rounded-xl"
+        :class="{
+          'rounded-bl-none bg-[#456990] px-4 py-3 text-left text-white': !isMe,
+          'rounded-br-none bg-[#E9E9E9] px-4 py-3 text-left text-black': isMe,
+        }"
+        v-html="message.message"
+      />
 
       <p
-        class="text-[10px] " :class="{
-          'text-neutral-600': isMe,
-          'text-neutral-400': !isMe,
-
+        class="text-[10px] text-[#B3B3B3]"
+        :class="{
+          'text-left': !isMe,
+          'text-right': isMe,
         }"
       >
         {{ message.created_at.toLocaleTimeString() }} {{ message.created_at.toLocaleDateString() }}

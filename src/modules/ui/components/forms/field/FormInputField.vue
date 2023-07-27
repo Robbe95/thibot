@@ -51,7 +51,7 @@ const borderColor = computed(() => {
     return 'border-success-500'
   if (isReadOnly)
     return 'border-gray-300'
-  return 'border-neutral-800'
+  return 'border-[#B3B3B3]'
 })
 
 // #region Group logic
@@ -100,12 +100,12 @@ if (typeof modelValue.value === 'number') {
       </slot>
     </FormLabel>
     <div class="flex ">
-      <div v-if="slots['front-content']" class="flex rounded rounded-r-none border bg-gray-200 px-4" :class="borderColor">
+      <div v-if="slots['front-content']" class="flex rounded-lg rounded-r-none border bg-gray-200 px-4" :class="borderColor">
         <slot name="front-content" />
       </div>
 
       <div
-        class="flex h-full w-full rounded border"
+        class="flex h-full w-full rounded-lg border"
         :class="[
           borderColor,
           {
@@ -116,7 +116,7 @@ if (typeof modelValue.value === 'number') {
       >
         <input
           :id="uuid" v-model="modelValue" :disabled="isDisabled" :type="type" min="0"
-          class="relative w-full rounded px-4 py-2 placeholder:transition-all placeholder:duration-300 focus:placeholder:translate-x-1 focus:placeholder:opacity-0"
+          class="relative w-full rounded-lg px-4 py-2 placeholder:transition-all placeholder:duration-300 focus:placeholder:translate-x-1 focus:placeholder:opacity-0"
           :placeholder="placeholder" :readonly="isReadOnly" @blur="emits('blur')"
         >
 
@@ -128,7 +128,7 @@ if (typeof modelValue.value === 'number') {
           {{ unit }}
         </div>
       </div>
-      <div v-if="slots['back-content']" class="flex rounded rounded-l-none border bg-gray-200 " :class="borderColor">
+      <div v-if="slots['back-content']" class="flex rounded-lg rounded-l-none border bg-gray-200 " :class="borderColor">
         <slot name="back-content" />
       </div>
     </div>

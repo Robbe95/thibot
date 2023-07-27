@@ -6,12 +6,13 @@ const { log, isLoading } = defineProps<{ log: Message[]; isLoading: boolean }>()
 
 <template>
   <div
-    class="flex w-full flex-col gap-2 duration-200" :class="{
+    class="flex flex-col justify-end gap-2 " :class="{
       'opacity-30': isLoading,
     }"
   >
     <ChatBubble
-      v-for="(message, key) in log" :key="message.message" :message="message"
+      v-for="(message, key) in log"
+      :key="message.message" class="py-2" :message="message"
       :is-first-of-sender="log[key - 1]?.role !== message.role"
     />
   </div>
