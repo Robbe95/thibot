@@ -90,7 +90,7 @@ handleCreateConversation()
       </div>
       <div v-else class="flex flex-col gap-4 px-12">
         <p
-          class="mb-1 w-full rounded-xl bg-[#456990] px-4 py-3 text-left text-white shadow-main"
+          class="mb-1 mt-20 w-full rounded-xl bg-[#456990] px-4 py-3 text-left text-white shadow-main"
         >
           Hej, ik ben Thibaut Courtois, je digitale welzijnscoach. Laten we samen werken aan je mentale kracht en voetbalplezier. Waar wil je vandaag over praten?
         </p>
