@@ -13,7 +13,9 @@ const isLoading = ref(false)
 const conversation = ref<Conversation>()
 
 const breakpoints = useBreakpoints(breakpointsTailwind)
-const hasConfirmed = ref(!!currentChat.value)
+const hasConfirmed = defineModel<Boolean>('modelValue', {
+  required: true,
+})
 const isMobile = breakpoints.smallerOrEqual('lg')
 
 const scrollToBottom = (id: string): void => {
