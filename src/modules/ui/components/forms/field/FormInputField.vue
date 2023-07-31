@@ -105,7 +105,7 @@ if (typeof modelValue.value === 'number') {
       </div>
 
       <div
-        class="flex h-full w-full rounded-lg border"
+        class="flex h-full w-full rounded-lg border bg-white"
         :class="[
           borderColor,
           {
