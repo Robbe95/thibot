@@ -12,6 +12,7 @@ export const messageSchema = z.object({
   message: z.string(),
   created_at: z.string().transform(value => addHours(new Date(value), 2)),
   updated_at: z.string().transform(value => addHours(new Date(value), 2)),
+  isLoader: z.boolean().optional(),
 })
 
 export const conversationSchema = z.object({

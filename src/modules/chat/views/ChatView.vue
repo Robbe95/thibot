@@ -48,7 +48,7 @@ const handleSendMessage = async (message: string): Promise<void> => {
   setTimeout(() => scrollToBottom('chat-log'), 1)
   conversation.value = await postMessage(currentChat.value, message)
   isSending.value = false
-  setTimeout(() => scrollToBottom('chat-log'), 1)
+  setTimeout(() => scrollToBottom('chat-log'), 500)
 }
 
 handleCreateConversation()
