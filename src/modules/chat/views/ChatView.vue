@@ -61,7 +61,7 @@ handleCreateConversation()
         <div class="hidden items-center justify-center lg:flex">
           <!-- <img src="@/assets/thibke.png" alt="Chat" class="h-[40rem] "> -->
         </div>
-        <div class="flex flex-1 flex-col overflow-hidden bg-white lg:items-center lg:justify-center lg:rounded-lg">
+        <div class="relative flex flex-1 flex-col overflow-hidden bg-white lg:items-center lg:justify-center lg:rounded-lg">
           <div class="grid w-full grid-cols-3 bg-primary-500 px-4 py-2 text-left">
             <h1
               class=" flex w-full items-center gap-4  text-xl font-bold text-white

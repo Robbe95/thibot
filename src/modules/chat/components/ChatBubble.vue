@@ -5,6 +5,8 @@ interface Props {
   message: Message
   isFirstOfSender: boolean
   isLastOfSender: boolean
+  isFirst: boolean
+  isLast: boolean
 }
 const { message } = defineProps<Props>()
 
@@ -12,7 +14,13 @@ const isMe = computed(() => message.role === 'user')
 </script>
 
 <template>
-  <div class="mb-4 flex items-end justify-end gap-2">
+  <div
+    class="flex items-end justify-start gap-2"
+    :class="{
+      'mb-4': isLast,
+
+    }"
+  >
     <img v-if="!isMe && isLastOfSender" src="@/assets/thibhaufd.png" alt="Thibke">
     <div v-else class="w-12 flex-none p-0.5" />
 
@@ -24,7 +32,7 @@ const isMe = computed(() => message.role === 'user')
       }"
     >
       <div
-        v-if="isFirstOfSender"
+        v-if="isFirstOfSender && !isFirst"
         class="mb-0.5 text-sm text-[#B3B3B3]"
         :class="{
           'text-left': !isMe,
@@ -41,7 +49,7 @@ const isMe = computed(() => message.role === 'user')
           class="max-w-[80%]"
         >
           <p
-            class="mb-1 w-full max-w-[80%] rounded-xl"
+            class="w-full max-w-[80%] rounded-xl"
             :class="{
               'rounded-bl-none bg-[#456990] px-4 py-3 text-left text-white': !isMe,
               'rounded-bl-xl': !isLastOfSender && !isMe,
@@ -59,7 +67,7 @@ const isMe = computed(() => message.role === 'user')
           }"
         >
           <p
-            class="mb-1 w-full  rounded-xl"
+            class="w-full  rounded-xl"
             :class="{
               'rounded-bl-none bg-[#456990] px-4 py-3 text-left text-white': !isMe,
               'rounded-bl-xl': !isLastOfSender && !isMe,
