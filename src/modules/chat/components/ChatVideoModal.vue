@@ -6,14 +6,13 @@ const emits = defineEmits<{
 
 <template>
   <div class="absolute left-0 top-0 z-10 h-full w-full backdrop-blur-sm">
-    <div class="relative h-full w-full p-2 lg:p-16">
+    <div class="relative h-full w-full px-2 py-16 lg:p-16">
       <div class="relative flex h-full w-full items-center justify-center">
-        <button class="absolute right-4 top-4 z-20 text-black" @click="emits('close')">
-          <CloseIcon class="h-6 w-6" />
+        <button class="absolute bottom-2 left-1/2 z-20 -translate-x-1/2 rounded-full bg-red-500 p-2 text-white" @click="emits('close')">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8" viewBox="0 0 24 24"><path fill="currentColor" d="M12 9c-1.6 0-3.15.25-4.6.72v3.1c0 .4-.23.74-.56.9c-.98.49-1.87 1.12-2.67 1.85c-.17.18-.42.29-.67.29c-.3 0-.55-.12-.73-.3L.29 13.08a.99.99 0 0 1-.29-.7c0-.28.11-.53.29-.71C3.34 8.77 7.46 7 12 7c4.54 0 8.66 1.77 11.71 4.67c.18.18.29.43.29.71c0 .27-.11.52-.29.7l-2.48 2.48c-.18.18-.43.3-.73.3a.98.98 0 0 1-.68-.29c-.79-.73-1.68-1.36-2.66-1.85a.996.996 0 0 1-.56-.9v-3.1C15.15 9.25 13.6 9 12 9Z" /></svg>
         </button>
-
-        <div class="overflow-hidden rounded" style="aspect-ratio: 1/1;">
-          <video src="@/assets/thibot.mp4" autoplay class=" h-full w-full rounded-full bg-cover object-cover" />
+        <div class=" h-full w-full overflow-hidden">
+          <video src="@/assets/thibot.mp4" autoplay class=" h-full w-full rounded-lg object-cover" />
         </div>
       </div>
     </div>
