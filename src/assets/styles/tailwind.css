@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 *:focus {
-  @apply ring-2 ring-neutral-800 ring-opacity-100 ring-offset-2 outline-neutral-800;
+  @apply ring-2 ring-opacity-100 ring-neutral-800 outline-none;
 }

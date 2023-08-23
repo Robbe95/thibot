@@ -1,16 +1,14 @@
+import type { RouteRecordRaw } from 'vue-router'
 import { createRouter, createWebHistory } from 'vue-router'
 import type { Component } from 'vue'
-import type { Route } from './routes.type'
 import { routeNames } from './routes.type'
-import exampleRouter from '@/modules/example/router/example.router'
-import authRouter from '@/modules/auth/router/auth.router'
 import { authMiddleware } from '@/middleware/auth.middleware'
 import { cookiesMiddleware } from '@/middleware/cookies.middleware'
 
-export const routes: Route[] = [
+export const routes: RouteRecordRaw[] = [
   {
-    path: '/',
-    component: (): Promise<Component> => import('../layouts/Main.vue'),
+    path: '/v1',
+    component: (): Promise<Component> => import('../layouts/MainLayout.vue'),
     name: routeNames.MAIN,
     children: [
       {
@@ -18,24 +16,24 @@ export const routes: Route[] = [
         name: routeNames.INDEX,
         path: '',
       },
-      
-      ...exampleRouter,
-      ...authRouter,
     ],
   },
   {
-    path: '/sidebar',
-    component: (): Promise<Component> => import('../layouts/SidebarLayout.vue'),
-    name: routeNames.SIDEBAR,
+    path: '/v2',
+    component: (): Promise<Component> => import('../layouts/MainLayoutV2.vue'),
+    name: routeNames.MAIN_V2,
     children: [
       {
-        component: (): Promise<Component> => import('../pages/TableExample.vue'),
-        name: routeNames.EXAMPLE_TABLE,
+        component: (): Promise<Component> => import('../modules/chat/views/ChatViewV2.vue'),
+        name: routeNames.INDEX_V2,
         path: '',
       },
     ],
   },
-
+  {
+    path: '',
+    redirect: { name: routeNames.INDEX },
+  },
 ]
 
 const router = createRouter({

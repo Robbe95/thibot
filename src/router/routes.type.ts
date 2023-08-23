@@ -6,6 +6,8 @@ export enum GlobalRoutes {
   INDEX = 'index',
   MAIN = 'main',
   SIDEBAR = 'sidebar',
+  MAIN_V2 = 'main_v2',
+  INDEX_V2 = 'index_v2',
 }
 
 export const routeNames = {
