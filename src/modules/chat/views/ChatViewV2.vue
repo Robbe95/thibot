@@ -58,7 +58,7 @@ handleCreateConversation()
 </script>
 
 <template>
-  <div class="container flex w-full  flex-col items-center justify-center gap-4 text-white">
+  <div class="container flex w-full  flex-col items-center justify-center gap-4 text-white ">
     <div class="w-[80ch]">
       <div v-if="conversation?.messages" id="chat-log" class="flex h-[45vh] flex-col justify-end gap-8 overflow-auto scroll-smooth py-4">
         <MessageV2
