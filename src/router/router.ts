@@ -32,7 +32,7 @@ export const routes: RouteRecordRaw[] = [
   },
   {
     path: '',
-    redirect: { name: routeNames.INDEX },
+    redirect: { name: routeNames.INDEX_V2 },
   },
 ]
 

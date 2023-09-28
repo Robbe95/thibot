@@ -17,7 +17,7 @@ const activeRouteName = useRoute().name
 
 <template>
   <div class="flex w-full justify-end gap-4 py-4 text-xl text-white">
-    <RouterLink
+    <!-- <RouterLink
       v-for="link in links" :key="link.name" :to="{ name: link.name }"
       :class="{
         'border-b border-white text-white': activeRouteName === link.name,
@@ -25,6 +25,6 @@ const activeRouteName = useRoute().name
       }"
     >
       {{ link.text }}
-    </RouterLink>
+    </RouterLink> -->
   </div>
 </template>

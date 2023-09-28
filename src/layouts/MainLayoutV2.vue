@@ -9,7 +9,7 @@ import TheHeader from './TheHeader.vue'
     <TheHeader class="z-20" />
 
     <div class="absolute left-16 top-16">
-      <img src="@/assets/thibke.png" class="h-40">
+      <!-- <img src="@/assets/thibke.png" class="h-40"> -->
     </div>
 
     <div class="relative">
