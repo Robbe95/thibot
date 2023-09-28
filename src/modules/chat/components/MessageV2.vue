@@ -52,9 +52,7 @@ watch(
           }"
         >
           <VueWriter v-if="isLast && !isMe" :array="[message.message]" :type-speed="10" :iterations="1" />
-          <p v-else>
-            {{ message.message }}
-          </p>
+          <p v-else v-html="message.message" />
         </div>
       </TransitionExpand>
 
